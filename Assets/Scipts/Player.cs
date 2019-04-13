@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	public CharacterController Controller;
-	public float Speed;
+	public float Speed = 2;
 	public int Health = 5;
 
     // Start is called before the first frame update

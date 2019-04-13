@@ -124,9 +124,10 @@ GameObject:
   - component: {fileID: 932324578}
   - component: {fileID: 932324577}
   - component: {fileID: 932324576}
+  - component: {fileID: 932324580}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,6 +205,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &932324580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932324575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c71a98b0fa74c04fbe38542db0eb4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3932216017785892390, guid: b65b132d5b5bbaa41853acca29580759, type: 3}
+  NumberOfBullets: 100
 --- !u!1 &1058188634
 GameObject:
   m_ObjectHideFlags: 0
