@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageController : MonoBehaviour
+public class EventController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,15 +13,6 @@ public class DamageController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
     }
-
-    private void OnTriggerStay(Collider other)
-    {
-	    if (other.CompareTag("Player"))
-	    {
-			other.GetComponent<Player>().TakeDamage(1);
-			this.gameObject.SetActive(false);
-	    }
-	}
-
 }
