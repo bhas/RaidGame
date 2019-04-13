@@ -16,8 +16,8 @@ public class LevelMenuController : MonoBehaviour
         
     }
 
-    public void PlayClick()
+    public void ReadyClick()
     {
-        print("PlayClick");
+        print("ReadyClick");
     }
 }
