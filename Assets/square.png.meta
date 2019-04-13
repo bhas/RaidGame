@@ -1,9 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 0d382a93edf698440b488257343d82fb
+TextureImporter:
+  fileIDToRecycleName: {}
+=======
 guid: 7c706ecd2679c294ca7160342b8da4c8
 TextureImporter:
   fileIDToRecycleName:
     21300000: square_0
     21300002: square_1
+>>>>>>> master
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -47,7 +53,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+  spritePixelsToUnits: 100
+=======
   spritePixelsToUnits: 200
+>>>>>>> master
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -82,6 +92,37 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6fc3778175928554e8a6a4851c1479da
+=======
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -129,6 +170,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: e7bbb3971aa24624396d140c093f10b9
+>>>>>>> master
     vertices: []
     indices: 
     edges: []

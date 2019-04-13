@@ -22,8 +22,6 @@ public class DamageController : MonoBehaviour
 			other.GetComponent<Player>().TakeDamage(1);
 			this.gameObject.SetActive(false);
 	    }
-	    print(other.tag);
-
 	}
 
 }
