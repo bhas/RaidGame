@@ -1,7 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 0d382a93edf698440b488257343d82fb
 TextureImporter:
   fileIDToRecycleName: {}
+=======
+guid: 7c706ecd2679c294ca7160342b8da4c8
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: square_0
+    21300002: square_1
+>>>>>>> master
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -45,7 +53,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 100
+=======
+  spritePixelsToUnits: 200
+>>>>>>> master
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -80,6 +92,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
   - serializedVersion: 2
     buildTarget: Android
     maxTextureSize: 2048
@@ -109,6 +122,55 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 6fc3778175928554e8a6a4851c1479da
+=======
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: square_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 108
+        width: 86
+        height: 86
+      alignment: 9
+      pivot: {x: 0.05904893, y: 0.49527615}
+      border: {x: 10, y: 10, z: 11, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9016fb7f91880da49828e4605a7e565d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: square_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 110
+        width: 80
+        height: 80
+      alignment: 9
+      pivot: {x: 0.0048752786, y: 0.50507814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334459bd10bd276428737842e2d6034d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e7bbb3971aa24624396d140c093f10b9
+>>>>>>> master
     vertices: []
     indices: 
     edges: []

@@ -5,31 +5,39 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
 	public GameObject prefab;
-	public float NumberOfBullets = 100;
+	public static float NumberOfBullets = 100;
+	private float rotation;
+	private Vector3 size;
+	private Vector3 position;
+	private GameObject init;
 	// Start is called before the first frame update
 	void Start()
     {
-        
-    }
+	    rotation = 360 / NumberOfBullets;
+		size = this.GetComponent<Collider>().bounds.size / 3;
+	}
 
     // Update is called once per frame
     void Update()
     {
 	    if (Input.GetKeyDown("space"))
 	    {
-		    Boom();
-	    }
-    }
+		    Destroy(init);
+			float x = Random.Range(-size.x, size.x);
+		    float z = Random.Range(-size.z, size.z);
+			position = new Vector3(x, 0.1f, z);
+			init = Instantiate(prefab, position, Quaternion.identity);
+			init.transform.Rotate(Vector3.right, 90);
+			Invoke("Show3", 0);
+		    Invoke("Show2", 1);
+		    Invoke("Show1", 2);
+		    Invoke("Boom", 3 );
+		}
+	}
 
 	private void Boom()
 	{
-		float rotation = 360 / NumberOfBullets;
-		Vector3 size = this.GetComponent<Collider>().bounds.size/3;
-		float x = Random.Range(-size.x, size.x);
-		float z = Random.Range(-size.z, size.z);
-
-		Vector3 position = new Vector3(x,0.1f,z); 
-
+		Destroy(init);
 		for (int i = 0; i < NumberOfBullets; i++)
 		{
 			var bullet = Instantiate(prefab, position, Quaternion.identity);
@@ -37,6 +45,22 @@ public class Explosion : MonoBehaviour
 			bullet.GetComponent<Rigidbody>().AddForce(bullet.transform.forward * 100);
 			bullet.transform.Rotate(Vector3.right, 90);
 		}
+	}
+
+	private void Show3()
+	{
+		
+		init.GetComponent<SpriteRenderer>().color = Color.green;
+	}
+
+	private void Show2()
+	{
+		init.GetComponent<SpriteRenderer>().color = Color.yellow;
+	}
+
+	private void Show1()
+	{
+		init.GetComponent<SpriteRenderer>().color = Color.red;
 	}
 
 }
