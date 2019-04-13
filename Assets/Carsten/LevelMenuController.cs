@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelMenuController : MonoBehaviour
 {
+    //bool 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +18,10 @@ public class LevelMenuController : MonoBehaviour
         
     }
 
-    public void ReadyClick()
+    public void ReadyClick(int i)
     {
-        print("ReadyClick");
+        //print("Player" + i + "ready");
+        var str = string.Format("Player {0} ready", i);
+        print(str);
     }
 }
