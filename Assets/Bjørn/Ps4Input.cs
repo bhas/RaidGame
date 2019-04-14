@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Ps4Input
 {
-    public int player;
-    public Ps4Input(int player)
+    private int player;
+    public Ps4Input(InputSource player)
     {
-        this.player = player;
+        this.player = (int) player;
     }
 
     public Vector2 GetLeftAnalog()
@@ -40,7 +40,6 @@ public class Ps4Input
     public bool GetButton(Ps4Button button)
     {
         var keyCode = GetKeyCode(button);
-        Console.WriteLine("Keycode");
         return Input.GetKey(keyCode);
     }
 
@@ -85,4 +84,13 @@ public class Ps4Input
 public enum Ps4Button
 {
     Cross, Square, Circle, Triangle
+}
+
+public enum InputSource
+{
+    Keyboard = 0,
+    Controller1 = 1,
+    Controller2 = 2,
+    Controller3 = 3,
+    Controller4 = 4
 }
