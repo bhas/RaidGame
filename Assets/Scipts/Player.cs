@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,21 +10,26 @@ public class Player : MonoBehaviour
 	public KeyCode right;
 	public KeyCode up;
 	public KeyCode down;
+	public KeyCode Dash;
 
-	public CharacterController Controller;
+	private CharacterController Controller;
 	public SpriteRenderer HealthBar;
 	public SpriteRenderer ShieldBar;
 	public float Speed = 2;
 	public float Health;
 	public float Shield;
 
+	public float DashCooldown = 2000;
+	public float DashSpeed = 40;
+	private DateTime DashLastUsed;
+
 	// Start is called before the first frame update
 	void Start()
 	{
 		Controller = this.GetComponent<CharacterController>();
 		Controller.enabled = true;
-		UpdateHealthBar();
-		UpdateShieldBar();
+		// UpdateHealthBar();
+		// UpdateShieldBar();
 	}
 
 	// Update is called once per frame
@@ -50,7 +56,19 @@ public class Player : MonoBehaviour
 		{
 			dz = -1;
 		}
-		Controller.SimpleMove(new Vector3(dx, 0, dz) * Speed);
+
+		var basicSpeed = new Vector3(dx, 0, dz) * Speed;
+		if (Input.GetKeyDown(Dash) && (float)DateTime.Now.Subtract(DashLastUsed).TotalMilliseconds >= DashCooldown)
+		{
+			//speed *= 40;
+			DashLastUsed = DateTime.Now;
+			basicSpeed += new Vector3(dx*20, 0, dz*20);
+			print("Dashing: " + basicSpeed);
+
+		}
+
+
+		Controller.SimpleMove(basicSpeed);
 	}
 
 	public void TakeDamage(float damage)
